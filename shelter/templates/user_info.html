@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="container card text-center align-item-center col-md-6 mt-5">
+        <img class="card-img-top img-thumbnail" src="{{ url_for('static', filename='img/default.jpg') }}" alt="Card image cap">
+        <div class="card-header">
+            User Information
+        </div>
+        <div class="card-body">
+            <h4 class="display-4 card-title text-capitalize"><strong>{{ user.name }} {{ user.surname }}</strong></h4>
+            <hr>
+            <h4 class="card-text">{{ user.email }}</h4>
+            <hr>
+            <h4 class="card-text">{{ user.mobile_number }}</h4>
+        </div>
+    </div>
+{% endblock main %}

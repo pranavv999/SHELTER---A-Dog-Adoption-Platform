@@ -1,0 +1,152 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+
+  <div class="container content-section col-md-5 mt-3">
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+
+      <legend class="border-bottom mb-4">SignUp</legend>
+
+      <div class="form-group">
+        {{ form.name.label }}
+
+        {% if form.name.errors %}
+
+          {{ form.name(class="form-control mb-2 is-invalid") }}
+          
+          <div class="invalid-feedback">
+            {% for error in form.name.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+        {% else %}
+
+        {{ form.name(class="form-control mb-2", placeholder="John") }}
+
+        {% endif %}
+
+      </div>
+
+      <div class="form-group">
+        {{ form.surname.label }}
+
+        {% if form.surname.errors %}
+
+          {{ form.surname(class="form-control mb-2 is-invalid") }}
+          
+          <div class="invalid-feedback">
+            {% for error in form.surname.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+      {% else %}
+
+      {{ form.surname(class="form-control mb-2", placeholder="Doe") }}
+
+      {% endif %}
+        
+      </div>
+
+      <div class="form-group">
+        {{ form.email.label }}
+
+        {% if form.email.errors %}
+
+          {{ form.email(class="form-control mb-2 is-invalid") }}
+          
+          <div class="invalid-feedback">
+            {% for error in form.email.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+        {% else %}
+
+        {{ form.email(class="form-control mb-2", placeholder="johndoe@xyz.com") }}
+
+        {% endif %}
+          
+      </div>
+
+      <div class="form-group">
+        {{ form.mobile_number.label }}
+
+        {% if form.mobile_number.errors %}
+
+          {{ form.mobile_number(class="form-control mb-2 is-invalid") }}
+          
+          <div class="invalid-feedback">
+            {% for error in form.mobile_number.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+        {% else %}
+
+        {{ form.mobile_number(class="form-control mb-2", placeholder="1234567890") }}
+
+        {% endif %}
+
+      </div>
+
+      <div class="form-group">
+        {{ form.password.label }}
+
+        {% if form.password.errors %}
+
+          {{ form.password(class="form-control mb-2 is-invalid") }}
+
+          <div class="invalid-feedback">
+            {% for error in form.password.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+        {% else %}
+
+          {{ form.password(class="form-control mb-2") }}
+
+      {% endif %}
+
+      </div>
+
+      <div class="form-group">
+        {{ form.confirm_password.label }}
+
+        {% if form.confirm_password.errors %}
+
+          {{ form.confirm_password(class="form-control mb-2 is-invalid") }}
+
+          <div class="invalid-feedback">
+            {% for error in form.confirm_password.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+
+        {% else %}
+
+        {{ form.confirm_password(class="form-control mb-2") }}
+
+        {% endif %}
+        
+      </div>
+
+      <div class="form-group">
+        {{ form.submit(class="btn btn-block btn-outline-primary") }}
+      </div>
+
+    </form>
+  </div>
+
+  <div class="container content-section col-md-5 mt-3 border-top pt-3">
+    <small class="text-muted">
+      Already Have an Account..? <a class="ml-2" href="{{ url_for('login') }}">Log In</a>
+    </small>
+  </div>
+
+
+{% endblock main %}

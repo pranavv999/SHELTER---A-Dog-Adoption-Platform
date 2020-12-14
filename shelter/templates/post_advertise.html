@@ -1,0 +1,90 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="container content-section col-md-7 mt-5">
+        <form method="POST" action="" enctype=multipart/form-data>
+            {{ form.hidden_tag() }}
+
+            <legend class="border-bottom mb-4">{{ legend }}</legend>
+
+            <div class="form-group">
+                {{ form.dog_breed.label(class="form-control-label") }}
+
+                {% if form.dog_breed.errors %}
+
+                {{ form.dog_breed(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.dog_breed.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.dog_breed(class="form-control mb-2", placeholder="German Shephard") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.location.label(class="form-control-label") }}
+
+                {% if form.location.errors %}
+
+                {{ form.location(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.location.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.location(class="form-control mb-2", placeholder="Delhi") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.description.label(class="form-control-label") }}
+
+                {% if form.description.errors %}
+
+                {{ form.description(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.description.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.description(class="form-control mb-2", placeholder="Information about dog") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.dog_pic.label() }}
+                {{ form.dog_pic(class="form-control-file") }}
+
+                {% if form.dog_pic.errors %}
+                    {% for error in form.dog_pic.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-block btn-outline-primary") }}
+            </div>
+
+        </form>
+    </div>
+{% endblock main %}

@@ -1,0 +1,78 @@
+# Create User with below credentials or with custom credentials
+
+format : - Name,
+           Surname,
+           Email,
+           Mobile,
+           Password
+
+**********User 1************
+John
+Doe
+jd@gmail.com
+1234567890
+pass
+
+**********User 2************
+Jane
+Parker
+jp@gmail.com
+1111111111
+pass
+
+
+# Create Post(Advertisements) with below credentials or with custom credentials
+
+format : - Breed_Name,
+           Location,
+           Description,
+           Image_File(Choose filename from folder)
+
+
+**********Advertise 1************
+Pug
+Delhi
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img
+
+**********Advertise 2************
+Pariah
+Kopargaon
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img
+
+**********Advertise 3************
+Spitz
+Shirdi
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img
+
+**********Advertise 4************
+German Shepherd
+Pune
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img
+
+**********Advertise 5************
+Siberian Husky
+Mumbai
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img
+
+**********Advertise 6************
+Golden Retriever
+Panvel
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia explicabo expedita dignissimos delectus, repudiandae eos minima harum atque velit rem quo dolor temporibus, fugit laboriosam exercitationem ad quasi tenetur culpa quisquam fuga! Soluta reiciendis ad repellendus quis necessitatibus possimus officia, excepturi totam libero molestiae, consequatur debitis sint? Earum, quas cum.
+
+select any file from  flask-website/shelter/static/img/dog_img

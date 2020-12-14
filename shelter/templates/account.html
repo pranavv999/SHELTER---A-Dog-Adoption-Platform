@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Full Name</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary text-capitalize">
+                        {{ current_user.name }} {{ current_user.surname }}
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        {{ current_user.email }}
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Mobile</h6>
+                      </div>
+                      <div class="col-sm-9 text-secondary">
+                        {{ current_user.mobile_number }}
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="container content-section col-md-7 mt-5">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+
+            <legend class="border-bottom mb-4">Update Account</legend>
+
+            <div class="form-group">
+                {{ form.name.label }}
+
+                {% if form.name.errors %}
+
+                {{ form.name(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.name.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.name(class="form-control mb-2", placeholder="John") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.surname.label }}
+
+                {% if form.surname.errors %}
+
+                {{ form.surname(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.surname.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.surname(class="form-control mb-2", placeholder="Doe") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.email.label }}
+
+                {% if form.email.errors %}
+
+                {{ form.email(class="form-control mb-2 is-invalid") }}
+
+                    <div class="invalid-feedback">
+                        {% for error in form.email.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                {% else %}
+
+                {{ form.email(class="form-control mb-2", placeholder="johndoe@xyz.com") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.mobile_number.label }}
+
+                {% if form.mobile_number.errors %}
+
+                {{ form.mobile_number(class="form-control mb-2 is-invalid") }}
+
+                <div class="invalid-feedback">
+                    {% for error in form.mobile_number.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+
+                {% else %}
+
+                {{ form.mobile_number(class="form-control mb-2", placeholder="1234567890") }}
+
+                {% endif %}
+
+            </div>
+
+            <div class="form-group">
+                {{ form.submit(class="btn btn-block btn-outline-primary") }}
+            </div>
+
+        </form>
+    </div>
+{% endblock main %}
